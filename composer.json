@@ -1,0 +1,48 @@
+{
+	"name": "Chinmaya Content Framework",
+	"description": "Chinmaya Content Framework",
+	"keywords": ["gcmw", "wordpress", "chinmaya"],
+	"authors": [
+		{
+			"name": "Vikrant Tyagi",
+			"email": "itsupport@chinmayamission.in",
+			"homepage": "http://www.chinmayamission.com/"
+		}
+	],
+	
+    "repositories": [
+        
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org"
+        }
+
+        ],
+
+
+	"require": {
+		"php": ">=5.4",
+		
+		"mnsami/composer-custom-directory-installer": "1.1.*",
+		"johnpbloch/wordpress": "4.7",
+
+		"wpackagist-theme/twentyfifteen": "1.7"
+			
+		
+	},
+
+	"autoload": {
+            "psr-4": {"Acme\\": "src/"}
+        },
+
+	"extra": {
+
+		"installer-paths":{
+			"htdocs/wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+			"htdocs/wp-content/themes/{$name}/": ["type:wordpress-theme"]
+		},
+    	"wordpress-install-dir": "htdocs/cms"
+    	
+    
+  }
+}	
